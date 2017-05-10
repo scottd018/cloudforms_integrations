@@ -9,5 +9,3 @@ object:
     priority: 3
     enabled: true
     tenant_id: 30000000000001
-    source: user
-    top_level_namespace: 
