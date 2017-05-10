@@ -1,0 +1,20 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: UnregisterClient
+    inherits: 
+    description: 
+  fields:
+  - log_entry:
+      value: "/Common/Log/LogBookend?bookend_status=enter&bookend_parent_method=UnregisterClient&bookend_org=${/#tenant.name}"
+  - rel1:
+      value: "/Regions/${/#miq_server.region_number}/Satellite/Default"
+      collect: sat_api_user = sat_api_user; sat_api_password = sat_api_password; sat_api_url
+        = sat_api_url
+  - meth1:
+      value: unregister_client
+  - log_exit:
+      value: "/Common/Log/LogBookend?bookend_status=exit&bookend_parent_method=UnregisterClient&bookend_org=${/#tenant.name}"

@@ -1,0 +1,19 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: UpdateList
+    inherits: 
+    description: 
+  fields:
+  - rel1:
+      value: "/Integration/Microsoft/SharePoint/Common#create"
+      collect: sp_username = sp_username; sp_password = sp_password; sp_server = sp_server;
+        sp_list_name = sp_list_name; sp_api_ref = sp_api_ref; sp_site = sp_site; sp_url_prefix
+        = sp_url_prefix
+  - meth1:
+      value: add_list_item
+  - meth2:
+      value: delete_list_item

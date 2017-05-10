@@ -1,0 +1,24 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: RegisterClient
+    inherits: 
+    description: 
+  fields:
+  - log_entry:
+      value: "/Common/Log/LogBookend?bookend_status=enter&bookend_parent_method=RegisterClient&bookend_org=${/#tenant.name}"
+  - rel1:
+      value: "/Regions/${/#miq_server.region_number}/Satellite/Default"
+      collect: sat_server = sat_server; sat_organization = sat_organization; sat_activation_key_prefix
+        = sat_activation_key_prefix; sat_sub_activation_key_prefix = sat_sub_activation_key_prefix;
+        sat_function_activation_key_prefix = sat_function_activation_key_prefix; sat_group_activation_key_prefix
+        = sat_group_activation_key_prefix
+  - meth1:
+      value: build_activation_key
+  - meth2:
+      value: register_client
+  - log_exit:
+      value: "/Common/Log/LogBookend?bookend_status=exit&bookend_parent_method=RegisterClient&bookend_org=${/#tenant.name}"

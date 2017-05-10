@@ -1,0 +1,473 @@
+---
+object_type: class
+version: 1.0
+object:
+  attributes:
+    description: 
+    display_name: 
+    name: PuppetEnterprise
+    type: 
+    inherits: 
+    visibility: 
+    owner: 
+  schema:
+  - field:
+      aetype: attribute
+      name: puppet_master_server
+      display_name: 
+      datatype: string
+      priority: 1
+      owner: 
+      default_value: 
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: puppet_ca_server
+      display_name: 
+      datatype: string
+      priority: 2
+      owner: 
+      default_value: 
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: puppet_db_server
+      display_name: 
+      datatype: string
+      priority: 3
+      owner: 
+      default_value: 
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: puppet_ca_api_endpoint
+      display_name: 
+      datatype: string
+      priority: 4
+      owner: 
+      default_value: puppet-ca
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: puppet_ca_api_version
+      display_name: 
+      datatype: string
+      priority: 5
+      owner: 
+      default_value: v1
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: puppet_ca_api_port
+      display_name: 
+      datatype: integer
+      priority: 6
+      owner: 
+      default_value: '8140'
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: puppet_api_endpoint
+      display_name: 
+      datatype: string
+      priority: 7
+      owner: 
+      default_value: puppet
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: puppet_api_version
+      display_name: 
+      datatype: string
+      priority: 8
+      owner: 
+      default_value: v3
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: puppet_api_port
+      display_name: 
+      datatype: integer
+      priority: 9
+      owner: 
+      default_value: '8140'
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: puppet_db_api_endpoint
+      display_name: 
+      datatype: string
+      priority: 10
+      owner: 
+      default_value: pdb
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: puppet_db_api_port
+      display_name: 
+      datatype: string
+      priority: 11
+      owner: 
+      default_value: '8081'
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: puppet_db_cmd_api_endpoint
+      display_name: 
+      datatype: string
+      priority: 12
+      owner: 
+      default_value: "${#puppet_db_api_endpoint}/cmd"
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: puppet_db_cmd_api_version
+      display_name: 
+      datatype: string
+      priority: 13
+      owner: 
+      default_value: v1
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: puppet_db_query_api_endpoint
+      display_name: 
+      datatype: string
+      priority: 14
+      owner: 
+      default_value: "${#puppet_db_api_endpoint}/query"
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: puppet_db_query_api_version
+      display_name: 
+      datatype: string
+      priority: 15
+      owner: 
+      default_value: v4
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: puppet_api_url
+      display_name: 
+      datatype: string
+      priority: 16
+      owner: 
+      default_value: https://${#puppet_master_server}:${#puppet_api_port}/${#puppet_api_endpoint}/${#puppet_api_version}
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: puppet_ca_api_url
+      display_name: 
+      datatype: string
+      priority: 17
+      owner: 
+      default_value: https://${#puppet_ca_server}:${#puppet_ca_api_port}/${#puppet_ca_api_endpoint}/${#puppet_ca_api_version}
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: puppet_db_cmd_api_url
+      display_name: 
+      datatype: string
+      priority: 18
+      owner: 
+      default_value: https://${#puppet_db_server}:${#puppet_db_api_port}/${#puppet_db_cmd_api_endpoint}/${#puppet_db_cmd_api_version}
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: puppet_db_query_api_url
+      display_name: 
+      datatype: string
+      priority: 19
+      owner: 
+      default_value: https://${#puppet_db_server}:${#puppet_db_api_port}/${#puppet_db_query_api_endpoint}/${#puppet_db_query_api_version}
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: puppet_agent_pkg
+      display_name: 
+      datatype: string
+      priority: 20
+      owner: 
+      default_value: puppet-agent
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: puppet_agent_service
+      display_name: 
+      datatype: string
+      priority: 21
+      owner: 
+      default_value: puppet
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: puppet_auth_cert
+      display_name: 
+      datatype: password
+      priority: 22
+      owner: 
+      default_value: 
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 
+  - field:
+      aetype: attribute
+      name: puppet_auth_key
+      display_name: 
+      datatype: password
+      priority: 23
+      owner: 
+      default_value: 
+      substitute: true
+      message: create
+      visibility: 
+      collect: 
+      scope: 
+      description: 
+      condition: 
+      on_entry: 
+      on_exit: 
+      on_error: 
+      max_retries: 
+      max_time: 

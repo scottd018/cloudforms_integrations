@@ -1,0 +1,22 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: Common
+    inherits: 
+    description: 
+  fields:
+  - sp_api_ref:
+      value: _vti_bin/ListData.svc
+  - sp_list_name:
+      value: Test
+  - sp_password:
+      value: v2:{MlYvrtq0Luh3aqG8+ZXl8cQk22G4FYH5uhHzxJuVTqg=}
+  - sp_username:
+      value: admin.dustin
+  - sp_server:
+      value: sp2010-01.scott.net
+  - sp_url_prefix:
+      value: http

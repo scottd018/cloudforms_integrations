@@ -1,0 +1,23 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: UnregisterClient
+    inherits: 
+    description: 
+  fields:
+  - log_entry:
+      value: "/Common/Log/LogBookend?bookend_status=enter&bookend_parent_method=UnregisterClient&bookend_org=${/#tenant.name}"
+  - rel1:
+      value: "/Integration/PuppetEnterprise/Default"
+      collect: puppet_auth_cert = puppet_auth_cert; puppet_auth_key = puppet_auth_key;
+        puppet_ca_api_url = puppet_ca_api_url; puppet_db_query_api_url = puppet_db_query_api_url;
+        puppet_db_cmd_api_url = puppet_db_cmd_api_url
+  - meth1:
+      value: revoke_cert
+  - meth2:
+      value: delete_node
+  - log_exit:
+      value: "/Common/Log/LogBookend?bookend_status=exit&bookend_parent_method=UnregisterClient&bookend_org=${/#tenant.name}"

@@ -1,0 +1,30 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: Default
+    inherits: 
+    description: 
+  fields:
+  - sat_server:
+      value: capsule-or-satellite.example.com
+  - sat_api_port:
+      value: '443'
+  - sat_api_version:
+      value: v2
+  - sat_api_user:
+      value: cloudforms-svc-acct
+  - sat_organization:
+      value: Example
+  - sat_location:
+      value: Example
+  - sat_activation_key_prefix:
+      value: act
+  - sat_sub_activation_key_prefix:
+      value: sub
+  - sat_function_activation_key_prefix:
+      value: function
+  - sat_group_activation_key_prefix:
+      value: group

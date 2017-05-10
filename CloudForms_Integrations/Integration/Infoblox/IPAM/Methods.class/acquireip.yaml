@@ -1,0 +1,24 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: AcquireIp
+    inherits: 
+    description: 
+  fields:
+  - set_env:
+      value: set_env
+  - rel1:
+      value: "/Integration/Infoblox/IPAM/Default"
+      collect: username = username; password = password; server = server; api_version
+        = api_version; object_type = object_type; object_ea_value = object_ea_value;
+        object_ea_key = object_ea_key; search_by_ea = search_by_ea
+  - rel2:
+      value: "/Common/Network/${#environment}"
+      collect: net_id = net_id; net_mask = net_mask; net_cidr = net_cidr; vlan_id
+        = vlan_id; dns_view = dns_view; dns_domain = dns_domain; gateway = gateway;
+        portgroup = portgroup
+  - meth1:
+      value: acquire_ip
