@@ -34,7 +34,7 @@ begin
     if return_fields.nil?
       url = "#{@base_url}" + "#{ref}"
     else
-      url = "#{@base_url}" + "#{ref}" + "\?_return_fields"
+      url = "#{@base_url}" + "#{ref}" + '?_return_fields='
     end
 
     # set params for api call
@@ -110,7 +110,7 @@ begin
       body[:aliases] = aliases unless aliases.nil?
 
       # call infoblox to reserve ip
-      host_response = call_infoblox(:post, 'record:host', :json, :json, body)
+      host_response = call_infoblox(:post, 'record:host', :json, :json, body, 'ipv4addr')
       log(:info, "Inspecting host: #{host_response.inspect}")
 
       # pull the ip from the host object
@@ -182,7 +182,7 @@ begin
   @debug = false
 
   # log entering method and dump root/object attributes
-  $evm.instantiate('/System/CommonMethods/Log/LogBookend' + '?' + { :bookend_status => :enter, :bookend_parent_method => @method, :bookend_org => @org }.to_query)
+  $evm.instantiate('/Common/Log/LogBookend' + '?' + { :bookend_status => :enter, :bookend_parent_method => @method, :bookend_org => @org }.to_query)
   [ 'root', 'object' ].each { |object_type| $evm.instantiate("/System/CommonMethods/Log/DumpAttrs?object_type=#{object_type}") if @debug == true }
 
   # ====================================
@@ -299,7 +299,7 @@ begin
   # ====================================
 
   # log exiting method and exit with MIQ_OK status
-  $evm.instantiate('/System/CommonMethods/Log/LogBookend' + '?' + { :bookend_status => :exit, :bookend_parent_method => @method, :bookend_org => @org }.to_query)
+  $evm.instantiate('/Common/Log/LogBookend' + '?' + { :bookend_status => :exit, :bookend_parent_method => @method, :bookend_org => @org }.to_query)
   exit MIQ_OK
 
 # set ruby rescue behavior
@@ -322,6 +322,6 @@ rescue => err
   prov.set_option(:errors, errors) if prov
 
   # log exiting method and exit with MIQ_ABORT status
-  $evm.instantiate('/System/CommonMethods/Log/LogBookend' + '?' + { :bookend_status => :exit, :bookend_parent_method => @method, :bookend_org => @org }.to_query)
+  $evm.instantiate('/Common/Log/LogBookend' + '?' + { :bookend_status => :exit, :bookend_parent_method => @method, :bookend_org => @org }.to_query)
   exit MIQ_ABORT
 end 
